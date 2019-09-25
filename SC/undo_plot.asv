@@ -1,0 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Função que elimina n operações de plot anteriores (usada para apagar o
+% "shape context" antigo quando se quer analisar um novo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function undo_plot(imag, n)
+% UNDO_PLOT Undo last 'n' plotting operations.
+	
+if nargin == 1 
+  n = 1;
+end
+	
+if n < 1
+  error('Can''t undo < 1 plotting operation!');
+end
+	
+figure(imag);
+children = get(gca, 'children');
+	
+for i = 1 : n
+  delete(children(i));
+end

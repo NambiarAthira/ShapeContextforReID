@@ -1,0 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Escreve o índice do ponto à esquerda do ponto
+% points é o array com os diferentes pontos
+% np é o número de pontos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function label_points(
+
